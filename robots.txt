@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://lossong.github.io/sitemap.xml
