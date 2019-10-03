@@ -50,7 +50,7 @@
 
 <meta itemprop="datePublished" content="2019-10-04T03:17:37&#43;08:00" />
 <meta itemprop="dateModified" content="2019-10-04T03:17:37&#43;08:00" />
-<meta itemprop="wordCount" content="875">
+<meta itemprop="wordCount" content="823">
 
 
 
@@ -131,7 +131,7 @@
         <div class="post-category">
             <a href="/categories/tools/"> tools </a>
             </div>
-          <span class="more-meta"> 约 875 字 </span>
+          <span class="more-meta"> 约 823 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         
       </div>
@@ -139,20 +139,33 @@
 
     
     <div class="post-content">
-      <p>####作为一只程序员，需要了解的东西非常多，其中就有Git
-####那什么是Git呢？  Git是目前世界上最先进的分布式版本控制系统
-####当我们的程序需要多个人编写时，团队之间的代码提交就需要这么一个管理平台，记录每次修改信息，保存了之前的版本。
-####所以呢接下来就学习下Git
-####推荐教程 <a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">廖雪峰Git教程</a>
-安装好后。。。
-##windows下，在想作为仓库的目录下，右键选择Git Bash Here（前提是安装好了Git）就会出现linux下bash
-###首先来初始化一个仓库 <code>git init</code>
-###添加文件  <code>git add &lt;file&gt;</code> 如 <code>git add ./src/index.html</code>
-###提交文件到当前分支  <code>git commit -m &quot;对提交文件的说明，比如修改内容等&quot;</code></p>
+      
 
-<p>##上面的操作时创建自己的仓库，我们还可以去克隆别人的仓库。
-###1、克隆仓库到本地 <code>git clone 仓库地址</code> 和 <code>git clone -b 分支名仓库地址</code>
-###2、接下来可对文件修改，然后进行提交</p>
+<h4 id="作为一只程序员-需要了解的东西非常多-其中就有git">作为一只程序员，需要了解的东西非常多，其中就有Git</h4>
+
+<h4 id="那什么是git呢-git是目前世界上最先进的分布式版本控制系统">那什么是Git呢？  Git是目前世界上最先进的分布式版本控制系统</h4>
+
+<h4 id="当我们的程序需要多个人编写时-团队之间的代码提交就需要这么一个管理平台-记录每次修改信息-保存了之前的版本">当我们的程序需要多个人编写时，团队之间的代码提交就需要这么一个管理平台，记录每次修改信息，保存了之前的版本。</h4>
+
+<h4 id="所以呢接下来就学习下git">所以呢接下来就学习下Git</h4>
+
+<h4 id="推荐教程-廖雪峰git教程-https-www-liaoxuefeng-com-wiki-0013739516305929606dd18361248578c67b8067c8c017b000">推荐教程 <a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">廖雪峰Git教程</a></h4>
+
+<p>安装好后。。。</p>
+
+<h2 id="windows下-在想作为仓库的目录下-右键选择git-bash-here-前提是安装好了git-就会出现linux下bash">windows下，在想作为仓库的目录下，右键选择Git Bash Here（前提是安装好了Git）就会出现linux下bash</h2>
+
+<h3 id="首先来初始化一个仓库-git-init">首先来初始化一个仓库 <code>git init</code></h3>
+
+<h3 id="添加文件-git-add-file-如-git-add-src-index-html">添加文件  <code>git add &lt;file&gt;</code> 如 <code>git add ./src/index.html</code></h3>
+
+<h3 id="提交文件到当前分支-git-commit-m-对提交文件的说明-比如修改内容等">提交文件到当前分支  <code>git commit -m &quot;对提交文件的说明，比如修改内容等&quot;</code></h3>
+
+<h2 id="上面的操作时创建自己的仓库-我们还可以去克隆别人的仓库">上面的操作时创建自己的仓库，我们还可以去克隆别人的仓库。</h2>
+
+<h3 id="1-克隆仓库到本地-git-clone-仓库地址-和-git-clone-b-分支名仓库地址">1、克隆仓库到本地 <code>git clone 仓库地址</code> 和 <code>git clone -b 分支名仓库地址</code></h3>
+
+<h3 id="2-接下来可对文件修改-然后进行提交">2、接下来可对文件修改，然后进行提交</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><span class="lnt">1
@@ -168,12 +181,17 @@
 <pre class="chroma">git commit -m &#34;description&#34;</pre></td></tr></table>
 </div>
 </div>
-<p>将本地的分支推送到远程仓库里 <code>git push origin 分支名字</code>
-##分支管理
-###创建分支 <code>git branch newbranch</code>
-###切换分支 <code>git checkout newbranch</code>
-###相当于创建并切换 <code>git checkout -b newbranch</code>
-用<code>git branch</code>命令查看当前分支</p>
+<p>将本地的分支推送到远程仓库里 <code>git push origin 分支名字</code></p>
+
+<h2 id="分支管理">分支管理</h2>
+
+<h3 id="创建分支-git-branch-newbranch">创建分支 <code>git branch newbranch</code></h3>
+
+<h3 id="切换分支-git-checkout-newbranch">切换分支 <code>git checkout newbranch</code></h3>
+
+<h3 id="相当于创建并切换-git-checkout-b-newbranch">相当于创建并切换 <code>git checkout -b newbranch</code></h3>
+
+<p>用<code>git branch</code>命令查看当前分支</p>
 
 <p>*newbranch
 master</p>
@@ -197,8 +215,9 @@ git merge命令用于合并指定分支到当前分支,所以<strong>首先要�
 </div>
 <p>删除分支 <code>git branch -d newbranch</code></p>
 
-<p>##其他常用命令
-显示仓库状态 <code>git status</code>
+<h2 id="其他常用命令">其他常用命令</h2>
+
+<p>显示仓库状态 <code>git status</code>
 查看修改内容 <code>git diff &lt;file&gt;</code>,就是查看difference，显示的格式正是Unix通用的diff格式。
 查看历史提交记录 <code>git log</code>
 查看分支合并图 <code>git log --graph</code>
