@@ -17,7 +17,7 @@
       <pubDate>Fri, 04 Oct 2019 03:17:37 +0800</pubDate>
       
       <guid>https://lossong.github.io/post/2019/10/4/gitlearning/</guid>
-      <description>作为一只程序员，需要了解的东西非常多，其中就有Git 那什么是Git呢？ Git是目前世界上最先进的分布式版本控制系统 当我们的程序需要多个人编写</description>
+      <description>Git，分布式版本控制系统，代码的管理平台 基本指令 初始化仓库 git init 添加文件 git add &amp;lt;file&amp;gt;/&amp;lt;directory&amp;gt; 如 git add . 提交文件仓库(local) git commit -m &amp;quot;description 克隆仓库到本地 1 2 3</description>
     </item>
     
   </channel>
