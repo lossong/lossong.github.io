@@ -141,7 +141,7 @@
     <div class="post-content">
       
 
-<h3 id="数据库-按照某种数据结构对数据进行组织-存储和管理的容器">数据库：按照某种数据结构对数据进行组织，存储和管理的容器。</h3>
+<h2 id="数据库-按照某种数据结构对数据进行组织-存储和管理的容器">数据库：按照某种数据结构对数据进行组织，存储和管理的容器。</h2>
 
 <p>如果没有数据库会存在的一些问题：</p>
 
@@ -157,7 +157,7 @@
 
 <p>Backup 备份恢复</p>
 
-<h3 id="数据库管理软件-dbms-用于管理维护数据库的软件">数据库管理软件(DBMS)：用于管理维护数据库的软件</h3>
+<h2 id="数据库管理软件-dbms-用于管理维护数据库的软件">数据库管理软件(DBMS)：用于管理维护数据库的软件</h2>
 
 <p>关系数据库管理系统：基于关系模型的数据库管理系统称为关系数据库管理系统</p>
 
@@ -187,11 +187,11 @@
 
 <p>实体属性-&gt;列</p>
 
-<h3 id="mysql-关系型数据库">MySQL 关系型数据库</h3>
+<h2 id="mysql-关系型数据库">MySQL 关系型数据库</h2>
 
 <p>基本单元：表</p>
 
-<h4 id="主键-pk-primary-key-表中唯一-不重复">主键: PK Primary Key（表中唯一，不重复）</h4>
+<h3 id="主键-pk-primary-key-表中唯一-不重复">主键: PK Primary Key（表中唯一，不重复）</h3>
 
 <p>主键是用来唯一标识表中的一条记录</p>
 
@@ -201,7 +201,7 @@
 
 <p>组合主键: Composite Key （当一个值不能唯一确定一个元素时，采用组合键作为主键）</p>
 
-<h4 id="外键-fk-foreign-key-外键约束该属性的取值范围-只有主键才能做外键">外键: Fk Foreign Key（外键约束该属性的取值范围，只有主键才能做外键）</h4>
+<h3 id="外键-fk-foreign-key-外键约束该属性的取值范围-只有主键才能做外键">外键: Fk Foreign Key（外键约束该属性的取值范围，只有主键才能做外键）</h3>
 
 <p>外键用于与另一张表的关联。是能确定另一张表记录的字段，用于保持数据的一致性</p>
 
@@ -217,25 +217,25 @@
 
 <p>要体现多对多的关系，一般采用连接表，将两张需要连接的表的主键作为外键存放进去</p>
 
-<h4 id="三大范式">三大范式</h4>
+<h3 id="三大范式">三大范式</h3>
 
 <p>在设计表时要遵从三大范式（虽然不是绝对的）</p>
 
-<h5 id="第一范式-符合1nf的关系中的每个属性都不可再分">第一范式:符合1NF的关系中的每个属性都不可再分。</h5>
+<h4 id="第一范式-符合1nf的关系中的每个属性都不可再分">第一范式:符合1NF的关系中的每个属性都不可再分。</h4>
 
 <p><img src="http://lossong.github.io/img/2019/10/1nf.png" alt="1.jpg" /></p>
 
-<h5 id="第二范式-任何非关键字段应该依赖于整个主键">第二范式:任何非关键字段应该依赖于整个主键</h5>
+<h4 id="第二范式-任何非关键字段应该依赖于整个主键">第二范式:任何非关键字段应该依赖于整个主键</h4>
 
 <p><img src="http://lossong.github.io/img/2019/10/2nf_1.png" alt="1.jpg" />
 <img src="http://lossong.github.io/img/2019/10/2nf_2.png" alt="1.jpg" /></p>
 
-<h5 id="第三范式-没有非主键字段-除主键之外的列-依赖于另一个非主键字段">第三范式:没有非主键字段（除主键之外的列），依赖于另一个非主键字段</h5>
+<h4 id="第三范式-没有非主键字段-除主键之外的列-依赖于另一个非主键字段">第三范式:没有非主键字段（除主键之外的列），依赖于另一个非主键字段</h4>
 
 <p><img src="http://lossong.github.io/img/2019/10/3nf_1.png" alt="1.jpg" />
 <img src="http://lossong.github.io/img/2019/10/3nf_2.png" alt="1.jpg" /></p>
 
-<h4 id="结构化查询语言-sql-structured-query-language">结构化查询语言 SQL（Structured Query Language）</h4>
+<h2 id="结构化查询语言-sql-structured-query-language">结构化查询语言 SQL（Structured Query Language）</h2>
 
 <p>SQL是一种特殊目的的编程语言，是一种数据库查询和程序设计语言</p>
 
@@ -353,7 +353,7 @@ DROP TABLE tb_name;
 DESC tb_name;</pre></td></tr></table>
 </div>
 </div>
-<h6 id="crud">CRUD</h6>
+<h3 id="crud">CRUD</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><span class="lnt"> 1
@@ -557,7 +557,7 @@ DELETE FROM tbl_name WHERE where_definition；
 UPDATE tb_name SET col_name1=expr1 [, col_name2=expr2 ...] [WHERE where_definition]</pre></td></tr></table>
 </div>
 </div>
-<h6 id="事务四要素acid">事务四要素ACID</h6>
+<h3 id="事务四要素acid">事务四要素ACID</h3>
 
 <p>Atomic 原子性 (不可再分，多个动作同时发生)
 Consistent 一致性（）
