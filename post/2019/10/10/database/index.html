@@ -50,7 +50,7 @@
 
 <meta itemprop="datePublished" content="2019-10-10T13:34:15&#43;08:00" />
 <meta itemprop="dateModified" content="2019-10-10T13:34:15&#43;08:00" />
-<meta itemprop="wordCount" content="2007">
+<meta itemprop="wordCount" content="1962">
 
 
 
@@ -131,8 +131,8 @@
         <div class="post-category">
             <a href="/categories/database/"> database </a>
             </div>
-          <span class="more-meta"> 约 2007 字 </span>
-          <span class="more-meta"> 预计阅读 5 分钟 </span>
+          <span class="more-meta"> 约 1962 字 </span>
+          <span class="more-meta"> 预计阅读 4 分钟 </span>
         
       </div>
     </header>
@@ -141,84 +141,107 @@
     <div class="post-content">
       
 
-<h4 id="数据库-按照某种数据结构对数据进行组织-存储和管理的容器">数据库：按照某种数据结构对数据进行组织，存储和管理的容器。</h4>
+<h3 id="数据库-按照某种数据结构对数据进行组织-存储和管理的容器">数据库：按照某种数据结构对数据进行组织，存储和管理的容器。</h3>
 
-<p>如果没有数据库会存在的一些问题：
-Size 数据量限制
-Ease of updating 难以维护
-Accuracy 同时操作
-Security 数据安全
-Redundancy 数据冗余
-Backup 备份恢复</p>
+<p>如果没有数据库会存在的一些问题：</p>
 
-<h4 id="数据库管理软件-dbms-用于管理维护数据库的软件">数据库管理软件(DBMS)：用于管理维护数据库的软件</h4>
+<p>Size 数据量限制</p>
 
-<p>关系数据库管理系统：基于关系模型的数据库管理系统称为关系数据库管理系统
-比较流行的关系数据库管理系统：Oracle，MySQL，SQL Server，DB2等</p>
+<p>Ease of updating 难以维护</p>
 
-<p>关系数据库中所谓的关系，实质上是一张二维表
-实体关系模型：该模型直接从现实世界中抽象出实体类型和实体间联系，然后用实体联系图（E-R图）表示数据模型，是描述概念世界，建立概念模型的实用工具</p>
+<p>Accuracy 同时操作</p>
+
+<p>Security 数据安全</p>
+
+<p>Redundancy 数据冗余</p>
+
+<p>Backup 备份恢复</p>
+
+<h3 id="数据库管理软件-dbms-用于管理维护数据库的软件">数据库管理软件(DBMS)：用于管理维护数据库的软件</h3>
+
+<p>关系数据库管理系统：基于关系模型的数据库管理系统称为关系数据库管理系统</p>
+
+<p>比较流行的关系数据库管理系统：Oracle，MySQL，SQL Server，DB2等</p>
+
+<p>关系数据库中所谓的关系，实质上是一张二维表</p>
+
+<p>实体关系模型：该模型直接从现实世界中抽象出实体类型和实体间联系，然后用实体联系图（E-R图）表示数据模型，是描述概念世界，建立概念模型的实用工具</p>
 
 <blockquote>
-<p>E-R图  矩形：实体  椭圆：属性 菱形：关系
-<img src="http://lossong.github.io/img/2019/10/实体关系.png" alt="1.jpg" /></p>
+<p>E-R图  矩形：实体  椭圆：属性 菱形：关系</p>
 </blockquote>
+
+<p><img src="http://lossong.github.io/img/2019/10/实体关系.png" alt="1.jpg" /></p>
 
 <p>实体间的关系: 一对一( 1 : 1 )，一对多( 1 : N )，多对多( M : N )</p>
 
-<p>一对一的举例：比如学生与学号的关系
-一对多的举例：比如班级与学生之间的关系
-多对多的举例：比如说学生与课程间的关系</p>
+<p>一对一的举例：比如学生与学号的关系</p>
 
-<p>实体集-&gt;表
-实体-&gt;行
-实体属性-&gt;列</p>
+<p>一对多的举例：比如班级与学生之间的关系</p>
 
-<h4 id="mysql-关系型数据库">MySQL 关系型数据库</h4>
+<p>多对多的举例：比如说学生与课程间的关系</p>
+
+<p>实体集-&gt;表</p>
+
+<p>实体-&gt;行</p>
+
+<p>实体属性-&gt;列</p>
+
+<h3 id="mysql-关系型数据库">MySQL 关系型数据库</h3>
 
 <p>基本单元：表</p>
 
-<p>#####主键: PK Primary Key（表中唯一，不重复）
-主键是用来唯一标识表中的一条记录
-主键可以由一个或多个字段（组合键）组成
-主键不能为空</p>
+<h4 id="主键-pk-primary-key-表中唯一-不重复">主键: PK Primary Key（表中唯一，不重复）</h4>
+
+<p>主键是用来唯一标识表中的一条记录</p>
+
+<p>主键可以由一个或多个字段（组合键）组成</p>
+
+<p>主键不能为空</p>
 
 <p>组合主键: Composite Key （当一个值不能唯一确定一个元素时，采用组合键作为主键）</p>
 
-<h5 id="外键-fk-foreign-key-外键约束该属性的取值范围-只有主键才能做外键">外键: Fk Foreign Key（外键约束该属性的取值范围，只有主键才能做外键）</h5>
+<h4 id="外键-fk-foreign-key-外键约束该属性的取值范围-只有主键才能做外键">外键: Fk Foreign Key（外键约束该属性的取值范围，只有主键才能做外键）</h4>
 
-<p>外键用于与另一张表的关联。是能确定另一张表记录的字段，用于保持数据的一致性
-外键可以重复，可以为空
-只有主键才能做外键
-简单点说，外键就是约束了该列的取值范围</p>
+<p>外键用于与另一张表的关联。是能确定另一张表记录的字段，用于保持数据的一致性</p>
 
-<p>在mysql中
-要体现1对1的关系，采用外键做主键，用在拆分一张表</p>
+<p>外键可以重复，可以为空</p>
+
+<p>只有主键才能做外键</p>
+
+<p>简单点说，外键就是约束了该列的取值范围</p>
+
+<p>要体现1对1的关系，采用外键做主键，用在拆分一张表</p>
 
 <p>要体现1对多的关系，一般采用主键做外键，外键放在多的那张表里。</p>
 
 <p>要体现多对多的关系，一般采用连接表，将两张需要连接的表的主键作为外键存放进去</p>
 
-<h5 id="三大范式">三大范式</h5>
+<h4 id="三大范式">三大范式</h4>
 
 <p>在设计表时要遵从三大范式（虽然不是绝对的）</p>
 
-<h6 id="第一范式-符合1nf的关系中的每个属性都不可再分">第一范式:符合1NF的关系中的每个属性都不可再分。</h6>
+<h5 id="第一范式-符合1nf的关系中的每个属性都不可再分">第一范式:符合1NF的关系中的每个属性都不可再分。</h5>
 
 <p><img src="http://lossong.github.io/img/2019/10/1nf.png" alt="1.jpg" /></p>
 
-<h6 id="第二范式-任何非关键字段应该依赖于整个主键">第二范式:任何非关键字段应该依赖于整个主键</h6>
+<h5 id="第二范式-任何非关键字段应该依赖于整个主键">第二范式:任何非关键字段应该依赖于整个主键</h5>
 
 <p><img src="http://lossong.github.io/img/2019/10/2nf_1.png" alt="1.jpg" />
 <img src="http://lossong.github.io/img/2019/10/2nf_2.png" alt="1.jpg" /></p>
 
-<h6 id="第三范式-没有非主键字段-除主键之外的列-依赖于另一个非主键字段">第三范式:没有非主键字段（除主键之外的列），依赖于另一个非主键字段</h6>
+<h5 id="第三范式-没有非主键字段-除主键之外的列-依赖于另一个非主键字段">第三范式:没有非主键字段（除主键之外的列），依赖于另一个非主键字段</h5>
 
 <p><img src="http://lossong.github.io/img/2019/10/3nf_1.png" alt="1.jpg" />
-<img src="http://lossong.github.io/img/2019/10/3nf_2.png" alt="1.jpg" />
-####结构化查询语言 SQL（Structured Query Language）
-SQL是一种特殊目的的编程语言，是一种数据库查询和程序设计语言，用于存取数据以及查询、更新和管理关系数据库系统；同时也是数据库脚本文件的扩展名。
-补充mysql的管理命令(windows下)：</p>
+<img src="http://lossong.github.io/img/2019/10/3nf_2.png" alt="1.jpg" /></p>
+
+<h4 id="结构化查询语言-sql-structured-query-language">结构化查询语言 SQL（Structured Query Language）</h4>
+
+<p>SQL是一种特殊目的的编程语言，是一种数据库查询和程序设计语言</p>
+
+<p>用于存取数据以及查询、更新和管理关系数据库系统；同时也是数据库脚本文件的扩展名。</p>
+
+<p>补充mysql的管理命令(windows下)：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><span class="lnt"> 1
@@ -394,19 +417,71 @@ where col_name like &#39;%a%&#39; 表示条件为中间包含a的。
 </div>
 </div>
 <p>现在假设两个表
-member表
-|mid|mname|
-|&mdash;-|&mdash;-|
-|1|张三|
-|2|李四|
-|3|王五|
-position表（成员mid作为外键在职位表中）
-|pid|mid|pname|
-|&mdash;-|&mdash;-|&mdash;-|
-|1|2|院长|
-|2|3|主任|
-|3|3|辅导员|
-|4| |班主任|</p>
+member表</p>
+
+<table>
+<thead>
+<tr>
+<th>mid</th>
+<th>mname</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>1</td>
+<td>张三</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>李四</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>王五</td>
+</tr>
+</tbody>
+</table>
+
+<p>position表（成员mid作为外键在职位表中）</p>
+
+<table>
+<thead>
+<tr>
+<th>pid</th>
+<th>mid</th>
+<th>pname</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>院长</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>3</td>
+<td>主任</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>3</td>
+<td>辅导员</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td></td>
+<td>班主任</td>
+</tr>
+</tbody>
+</table>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><span class="lnt">1
@@ -482,8 +557,9 @@ DELETE FROM tbl_name WHERE where_definition；
 UPDATE tb_name SET col_name1=expr1 [, col_name2=expr2 ...] [WHERE where_definition]</pre></td></tr></table>
 </div>
 </div>
-<p>######事务四要素ACID
-Atomic 原子性 (不可再分，多个动作同时发生)
+<h6 id="事务四要素acid">事务四要素ACID</h6>
+
+<p>Atomic 原子性 (不可再分，多个动作同时发生)
 Consistent 一致性（）
 Isolated 隔离性（）
 Durable 持久性</p>
