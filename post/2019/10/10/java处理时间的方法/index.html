@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Java处理时间的方法 - Recoding</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="lossong" /><meta name="description" content="Java的Date，Calender" /><meta name="keywords" content="Java" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.58.3 with theme even" />
+
+
+<link rel="canonical" href="https://lossong.github.io/post/2019/10/10/java%E5%A4%84%E7%90%86%E6%97%B6%E9%97%B4%E7%9A%84%E6%96%B9%E6%B3%95/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Java处理时间的方法" />
+<meta property="og:description" content="Java的Date，Calender" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lossong.github.io/post/2019/10/10/java%E5%A4%84%E7%90%86%E6%97%B6%E9%97%B4%E7%9A%84%E6%96%B9%E6%B3%95/" />
+<meta property="article:published_time" content="2019-10-10T19:58:48+08:00" />
+<meta property="article:modified_time" content="2019-10-10T19:58:48+08:00" />
+<meta itemprop="name" content="Java处理时间的方法">
+<meta itemprop="description" content="Java的Date，Calender">
+
+
+<meta itemprop="datePublished" content="2019-10-10T19:58:48&#43;08:00" />
+<meta itemprop="dateModified" content="2019-10-10T19:58:48&#43;08:00" />
+<meta itemprop="wordCount" content="770">
+
+
+
+<meta itemprop="keywords" content="Java," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Java处理时间的方法"/>
+<meta name="twitter:description" content="Java的Date，Calender"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">LOSSONG</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">LOSSONG</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Java处理时间的方法</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-10-10 100:107 </span>
+        <div class="post-category">
+            <a href="/categories/java/"> Java </a>
+            </div>
+          <span class="more-meta"> 约 770 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
+        
+      </div>
+    </header>
+
+    
+    <div class="post-content">
+      
+
+<h2 id="首先要提到的就是date类了">首先要提到的就是Date类了</h2>
+
+<h4 id="作为一个工具类-date类是java中比较常用类了-尽管有些方法过期了-总结一下它的用法">作为一个工具类，Date类是Java中比较常用类了（尽管有些方法过期了），总结一下它的用法</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-Java" data-lang="Java"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Java" data-lang="Java"><span class="c1">// 创建一个Date对象,采用当前系统时间作为日期
+</span><span class="c1"></span><span class="n">Date</span> <span class="nf">date</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Date</span><span class="p">();</span>
+<span class="c1">//Thu May 23 01:00:32 CST 2019
+</span><span class="c1"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">date</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+<span class="c1">//得到年份，获取到的年份需要+1900才是正确的年份
+</span><span class="c1"></span><span class="kt">int</span> <span class="nf">year</span> <span class="o">=</span> <span class="n">date</span> <span class="p">.</span><span class="na">getYear</span><span class="p">()</span> <span class="o">+</span> <span class="n">1900</span><span class="p">;</span>
+<span class="c1">//得到月份，月份和星期都是从0开始计起的
+</span><span class="c1"></span><span class="kt">int</span> <span class="nf">month</span> <span class="o">=</span> <span class="n">date</span> <span class="p">.</span><span class="na">getMonth</span><span class="p">()</span> <span class="o">+</span> <span class="n">1</span><span class="p">;</span>
+<span class="c1">//获得日期
+</span><span class="c1"></span><span class="kt">int</span> <span class="nf">day</span><span class="o">=</span> <span class="n">date</span> <span class="p">.</span><span class="na">getDate</span><span class="p">();</span>
+<span class="kt">int</span> <span class="nf">hour</span> <span class="o">=</span> <span class="n">date</span><span class="p">.</span><span class="na">getHours</span><span class="p">();</span>
+<span class="kt">int</span> <span class="nf">minute</span> <span class="o">=</span> <span class="n">date</span> <span class="p">.</span><span class="na">getMinutes</span><span class="p">();</span>
+<span class="kt">int</span> <span class="nf">second</span> <span class="o">=</span> <span class="n">date</span> <span class="p">.</span><span class="na">getSeconds</span><span class="p">();</span>
+<span class="kt">int</span> <span class="nf">week</span> <span class="o">=</span> <span class="n">date</span><span class="p">.</span><span class="na">getDay</span><span class="p">();</span><span class="c1">//获取星期
+</span><span class="c1">//格式化Date对象
+</span><span class="c1"></span><span class="n">SimpleDateFormat</span> <span class="nf">sdf</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SimpleDateFormat</span><span class="p">(</span><span class="s">&#34;yyyy-MM-dd HH:mm:ss&#34;</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">sdf</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="n">date</span><span class="p">));</span>
+<span class="c1">//MM表示月份，HH表示24小时进制，mm表示分钟
+</span><span class="c1">//时间字符串转Date对象
+</span><span class="c1"></span><span class="n">String</span> <span class="nf">date_time</span> <span class="o">=</span> <span class="s">&#34;2012-2-15 23:23:10&#34;</span><span class="p">;</span>
+<span class="n">Date</span> <span class="nf">date1</span> <span class="o">=</span> <span class="n">sdf</span><span class="p">.</span><span class="na">parse</span><span class="p">(</span><span class="n">date_time</span><span class="p">);</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="再来看看calendar类">再来看看Calendar类</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-Java" data-lang="Java"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Java" data-lang="Java"><span class="n">对象的域</span><span class="err">，</span><span class="n">可以利用get</span><span class="p">(</span><span class="o">~</span><span class="p">)</span><span class="n">方法获取</span><span class="err">，</span><span class="n">也可以利用set</span><span class="p">(</span><span class="o">~</span><span class="p">,</span><span class="n">值</span><span class="p">)</span><span class="n">去更改值</span><span class="err">，</span><span class="n">以及add</span><span class="p">(</span><span class="o">~</span><span class="p">,</span><span class="n">值</span><span class="p">)</span><span class="n">对属性进行加减操作</span><span class="err">。</span>
+<span class="n">Calendar</span><span class="p">.</span><span class="na">YEAR</span><span class="c1">//年份
+</span><span class="c1"></span><span class="n">Calendar</span><span class="p">.</span><span class="na">MONTH</span><span class="c1">//月份，初始仍然为0
+</span><span class="c1"></span><span class="n">Calendar</span><span class="p">.</span><span class="na">DATE</span><span class="c1">//日期
+</span><span class="c1"></span><span class="n">Calendar</span><span class="p">.</span><span class="na">DAY_OF_MONTH</span><span class="c1">//日期，和上面的字段意义相同
+</span><span class="c1"></span><span class="n">Calendar</span><span class="p">.</span><span class="na">HOUR</span><span class="c1">//12小时制的小时
+</span><span class="c1"></span><span class="n">Calendar</span><span class="p">.</span><span class="na">HOUR_OF_DAY</span><span class="c1">//24小时制的小时
+</span><span class="c1"></span><span class="n">Calendar</span><span class="p">.</span><span class="na">MINUTE</span><span class="c1">//分钟
+</span><span class="c1"></span><span class="n">Calendar</span><span class="p">.</span><span class="na">SECOND</span><span class="c1">//秒
+</span><span class="c1"></span><span class="n">Calendar</span><span class="p">.</span><span class="na">DAY_OF_WEEK</span><span class="o">//</span><span class="n">星期几</span><span class="err">，</span><span class="n">1代表星期日</span><span class="err">，</span><span class="n">2代表星期一</span><span class="err">。。。</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><strong>补充：</strong>
+SimpleDateFormat函数语法：<br />
+|符号|含义|符号|含义|
+|&mdash;&ndash;|&mdash;&ndash;|&mdash;&ndash;|&mdash;&ndash;|
+|G |年代标志符|E |星期|
+|y |年|D |一年中的第几天|
+|M |月|F |一月中第几个星期几|
+|d |日|w |一年中第几个星期|
+|h |时 在上午或下午 (1~12)|W |一月中第几个星期|
+|H |时 在一天中 (0~23)|a |上午 / 下午 标记符|
+|m |分|k |时 在一天中 (1~24)|
+|s |秒|K |时 在上午或下午 (0~11)|
+|S |毫秒|z| 时区|</p>
+
+    </div>
+
+    
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/java/">Java</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/2019/10/10/database/">
+            <span class="next-text nav-default">Database</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+  <a href="https://lossong.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">lossong</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
+  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+    var languageCode = "zh-cn".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
+    timeago().render(document.querySelectorAll('.timeago'), languageCode);
+    timeago.cancel();  
+  </script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
