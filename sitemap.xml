@@ -10,7 +10,49 @@
   
   <url>
     <loc>https://lossong.github.io/categories/</loc>
-    <lastmod>2019-10-04T03:17:37+08:00</lastmod>
+    <lastmod>2019-10-10T13:34:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://lossong.github.io/post/2019/10/10/database/</loc>
+    <lastmod>2019-10-10T13:34:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://lossong.github.io/categories/database/</loc>
+    <lastmod>2019-10-10T13:34:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://lossong.github.io/tags/mysql/</loc>
+    <lastmod>2019-10-10T13:34:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://lossong.github.io/post/</loc>
+    <lastmod>2019-10-10T13:34:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://lossong.github.io/</loc>
+    <lastmod>2019-10-10T13:34:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://lossong.github.io/tags/</loc>
+    <lastmod>2019-10-10T13:34:15+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -24,27 +66,6 @@
   
   <url>
     <loc>https://lossong.github.io/post/2019/10/4/gitlearning/</loc>
-    <lastmod>2019-10-04T03:17:37+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://lossong.github.io/post/</loc>
-    <lastmod>2019-10-04T03:17:37+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://lossong.github.io/</loc>
-    <lastmod>2019-10-04T03:17:37+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://lossong.github.io/tags/</loc>
     <lastmod>2019-10-04T03:17:37+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

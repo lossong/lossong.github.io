@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Database - Recoding</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="lossong" /><meta name="description" content="数据库知识的简单总结" /><meta name="keywords" content="mysql, database" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.58.3 with theme even" />
+
+
+<link rel="canonical" href="https://lossong.github.io/post/2019/10/10/database/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Database" />
+<meta property="og:description" content="数据库知识的简单总结" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lossong.github.io/post/2019/10/10/database/" />
+<meta property="article:published_time" content="2019-10-10T13:34:15+08:00" />
+<meta property="article:modified_time" content="2019-10-10T13:34:15+08:00" />
+<meta itemprop="name" content="Database">
+<meta itemprop="description" content="数据库知识的简单总结">
+
+
+<meta itemprop="datePublished" content="2019-10-10T13:34:15&#43;08:00" />
+<meta itemprop="dateModified" content="2019-10-10T13:34:15&#43;08:00" />
+<meta itemprop="wordCount" content="2007">
+
+
+
+<meta itemprop="keywords" content="mysql," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Database"/>
+<meta name="twitter:description" content="数据库知识的简单总结"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">LOSSONG</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">LOSSONG</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Database</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-10-10 100:101 </span>
+        <div class="post-category">
+            <a href="/categories/database/"> database </a>
+            </div>
+          <span class="more-meta"> 约 2007 字 </span>
+          <span class="more-meta"> 预计阅读 5 分钟 </span>
+        
+      </div>
+    </header>
+
+    
+    <div class="post-content">
+      
+
+<h4 id="数据库-按照某种数据结构对数据进行组织-存储和管理的容器">数据库：按照某种数据结构对数据进行组织，存储和管理的容器。</h4>
+
+<p>如果没有数据库会存在的一些问题：
+Size 数据量限制
+Ease of updating 难以维护
+Accuracy 同时操作
+Security 数据安全
+Redundancy 数据冗余
+Backup 备份恢复</p>
+
+<h4 id="数据库管理软件-dbms-用于管理维护数据库的软件">数据库管理软件(DBMS)：用于管理维护数据库的软件</h4>
+
+<p>关系数据库管理系统：基于关系模型的数据库管理系统称为关系数据库管理系统
+比较流行的关系数据库管理系统：Oracle，MySQL，SQL Server，DB2等</p>
+
+<p>关系数据库中所谓的关系，实质上是一张二维表
+实体关系模型：该模型直接从现实世界中抽象出实体类型和实体间联系，然后用实体联系图（E-R图）表示数据模型，是描述概念世界，建立概念模型的实用工具</p>
+
+<blockquote>
+<p>E-R图  矩形：实体  椭圆：属性 菱形：关系
+<img src="http://lossong.github.io/img/2019/10/实体关系.png" alt="1.jpg" /></p>
+</blockquote>
+
+<p>实体间的关系: 一对一( 1 : 1 )，一对多( 1 : N )，多对多( M : N )</p>
+
+<p>一对一的举例：比如学生与学号的关系
+一对多的举例：比如班级与学生之间的关系
+多对多的举例：比如说学生与课程间的关系</p>
+
+<p>实体集-&gt;表
+实体-&gt;行
+实体属性-&gt;列</p>
+
+<h4 id="mysql-关系型数据库">MySQL 关系型数据库</h4>
+
+<p>基本单元：表</p>
+
+<p>#####主键: PK Primary Key（表中唯一，不重复）
+主键是用来唯一标识表中的一条记录
+主键可以由一个或多个字段（组合键）组成
+主键不能为空</p>
+
+<p>组合主键: Composite Key （当一个值不能唯一确定一个元素时，采用组合键作为主键）</p>
+
+<h5 id="外键-fk-foreign-key-外键约束该属性的取值范围-只有主键才能做外键">外键: Fk Foreign Key（外键约束该属性的取值范围，只有主键才能做外键）</h5>
+
+<p>外键用于与另一张表的关联。是能确定另一张表记录的字段，用于保持数据的一致性
+外键可以重复，可以为空
+只有主键才能做外键
+简单点说，外键就是约束了该列的取值范围</p>
+
+<p>在mysql中
+要体现1对1的关系，采用外键做主键，用在拆分一张表</p>
+
+<p>要体现1对多的关系，一般采用主键做外键，外键放在多的那张表里。</p>
+
+<p>要体现多对多的关系，一般采用连接表，将两张需要连接的表的主键作为外键存放进去</p>
+
+<h5 id="三大范式">三大范式</h5>
+
+<p>在设计表时要遵从三大范式（虽然不是绝对的）</p>
+
+<h6 id="第一范式-符合1nf的关系中的每个属性都不可再分">第一范式:符合1NF的关系中的每个属性都不可再分。</h6>
+
+<p><img src="http://lossong.github.io/img/2019/10/1nf.png" alt="1.jpg" /></p>
+
+<h6 id="第二范式-任何非关键字段应该依赖于整个主键">第二范式:任何非关键字段应该依赖于整个主键</h6>
+
+<p><img src="http://lossong.github.io/img/2019/10/2nf_1.png" alt="1.jpg" />
+<img src="http://lossong.github.io/img/2019/10/2nf_2.png" alt="1.jpg" /></p>
+
+<h6 id="第三范式-没有非主键字段-除主键之外的列-依赖于另一个非主键字段">第三范式:没有非主键字段（除主键之外的列），依赖于另一个非主键字段</h6>
+
+<p><img src="http://lossong.github.io/img/2019/10/3nf_1.png" alt="1.jpg" />
+<img src="http://lossong.github.io/img/2019/10/3nf_2.png" alt="1.jpg" />
+####结构化查询语言 SQL（Structured Query Language）
+SQL是一种特殊目的的编程语言，是一种数据库查询和程序设计语言，用于存取数据以及查询、更新和管理关系数据库系统；同时也是数据库脚本文件的扩展名。
+补充mysql的管理命令(windows下)：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">#安装mysql
+shell&gt;mysqld install
+#卸载mysql
+shell&gt;mysqld remove
+#启动mysql
+shell&gt;net start mysql
+#关闭mysql
+shell&gt;net stop mysql
+#登录数据库
+shell&gt;mysql [–h HOST_NAME] –u USER_NAME –p 
+
+#数据库的备份(cmd下,注意命令执行的环境位置)
+
+#1、恢复之前需要手动创建数据库
+#导出
+shell&gt; mysqldump -u uname -p db_name &gt; 脚本文件地址
+#如：
+mysqldump -u root -p test &gt; E:/test.sql
+#导入(导入前要确保数据库里有db_name这个数据库)
+shell&gt; mysql -u uname -p db_name &lt; 脚本文件地址
+
+#2、恢复不需要手动创建数据库
+#导出
+shell&gt;mysqldump -u uname -p --databases db_name &gt; 脚本文件地址 
+#导入
+mysql&gt;source file_path
+#如：
+mysql&gt;source E:/test.sql;</pre></td></tr></table>
+</div>
+</div>
+<p>部分SQL命令</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">#查看已有数据库
+SHOW DATABASES;
+#使用数据库
+USE db_name;
+#创建数据库
+CREATE DATABASE db_name;
+#删除数据库
+DROP DATABASE db_name;
+
+#查看当前数据库下表
+SHOW TABLES;
+创建表
+CREATE TABLE tb_name(
+    列名1 类型(长度) 约束
+    列名2 类型(长度) 约束
+    ....
+);
+删除表
+DROP TABLE tb_name;
+查看表的结构
+DESC tb_name;</pre></td></tr></table>
+</div>
+</div>
+<h6 id="crud">CRUD</h6>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">#查询
+SELECT [ALL | DISTINCT | DISTINCTROW ] select_expr, ... [FROM table_references [WHERE where_definition] [ORDER BY {col_name | expr | position} [ASC | DESC] , ...] [LIMIT {[offset,] row_count | row_count OFFSET offset}] 
+
+#查询表中所有信息
+SELECT * FROM tb_name;
+#查询某一列或多列信息
+SELECT 列名1[,列名2,...] FROM tb_name;
+#条件查询
+SELECT 列名1[,列名2,...] FROM tb_name WHERE 条件;
+条件中可以添加比较运算符号，逻辑运算符与或非（and, or, ！）
+如：
+SELECT stu_name 
+FROM t_stu 
+WHERE stu_age &gt; 18 AND stu_age &lt; 23;
+
+SELECT a.stu_name,a.stu_birthday 
+FROM t_student a            #a在这里的作用是给表取个别名
+WHERE NOT (a.stu_id = &#39;20127006&#39; OR a.stu_id = &#39;20127007&#39;);
+
+#模糊查询 like 
+where col_name like &#39;%a&#39; 表示条件为以a结尾的。
+where col_name like &#39;a% 表示条件为以a开头的。
+where col_name like &#39;%a%&#39; 表示条件为中间包含a的。
+
+下划线可以替代一个字符,百分号替代任意个字符
+
+#排序 order by asc/desc 升序/降序
+待添加=)</pre></td></tr></table>
+</div>
+</div>
+<p>现在假设两个表
+member表
+|mid|mname|
+|&mdash;-|&mdash;-|
+|1|张三|
+|2|李四|
+|3|王五|
+position表（成员mid作为外键在职位表中）
+|pid|mid|pname|
+|&mdash;-|&mdash;-|&mdash;-|
+|1|2|院长|
+|2|3|主任|
+|3|3|辅导员|
+|4| |班主任|</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">#多表查询
+
+#内连接（等值连接） 只返回两个表中连接字段相等的行。  INNER JOIN ON
+SELECT m.mname,p.pname
+FROM member m
+INNER JOIN position p ON m.mid = p.mid  #m.mid 在左，m为左表 p为右表</pre></td></tr></table>
+</div>
+</div>
+<p><img src="http://lossong.github.io/img/2019/10/innerjoin.png" alt="1.jpg" /></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">#左连接 left join 返回包括左表中的所有记录和右表中连接字段相等的记录。
+SELECT m.mname,p.pname
+FROM member m
+LEFT JOIN position p ON m.mid = p.mid</pre></td></tr></table>
+</div>
+</div>
+<p><img src="http://lossong.github.io/img/2019/10/leftjoin.png" alt="1.jpg" /></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">#右连接 right join 返回包括右表中的所有记录和左表中连接字段相等的记录。
+SELECT m.mname,p.pname
+FROM member m
+RIGHT JOIN position p ON m.mid = p.mid</pre></td></tr></table>
+</div>
+</div>
+<p><img src="http://lossong.github.io/img/2019/10/rightjoin.png" alt="1.jpg" /></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">#增加
+INSERT INTO tb_name (col_name1,col_name1,...) VALUES(value1,value2,...);
+
+#删除
+DELETE [LOW_PRIORITY] [QUICK] [IGNORE] FROM tbl_name [WHERE where_definition]  
+#删除需要条件，否则会删除所有数据
+DELETE FROM tbl_name WHERE where_definition；
+
+#修改需要条件，否则会修改所有数据
+UPDATE tb_name SET col_name1=expr1 [, col_name2=expr2 ...] [WHERE where_definition]</pre></td></tr></table>
+</div>
+</div>
+<p>######事务四要素ACID
+Atomic 原子性 (不可再分，多个动作同时发生)
+Consistent 一致性（）
+Isolated 隔离性（）
+Durable 持久性</p>
+
+    </div>
+
+    
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/mysql/">mysql</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/2019/10/4/gitlearning/">
+            <span class="next-text nav-default">GitLearning</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+  <a href="https://lossong.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">lossong</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
+  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+    var languageCode = "zh-cn".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
+    timeago().render(document.querySelectorAll('.timeago'), languageCode);
+    timeago.cancel();  
+  </script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
