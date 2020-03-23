@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sort on Recoding</title>
+    <link>https://lossong.github.io/tags/sort/</link>
+    <description>Recent content in sort on Recoding</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 23 Mar 2020 22:25:16 +0800</lastBuildDate>
+    
+	<atom:link href="https://lossong.github.io/tags/sort/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Algorithm</title>
+      <link>https://lossong.github.io/post/2020/3/23/algorithm/</link>
+      <pubDate>Mon, 23 Mar 2020 22:25:16 +0800</pubDate>
+      
+      <guid>https://lossong.github.io/post/2020/3/23/algorithm/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
