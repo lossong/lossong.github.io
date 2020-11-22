@@ -32,12 +32,12 @@ Test Content It makes use of a variety of open source projects including:
     </item>
     
     <item>
-      <title>Java处理时间的方法</title>
-      <link>https://lossong.github.io/post/2019/10/10/java%E5%A4%84%E7%90%86%E6%97%B6%E9%97%B4%E7%9A%84%E6%96%B9%E6%B3%95/</link>
+      <title>Java 时间处理总结</title>
+      <link>https://lossong.github.io/post/2019/10/10/java%E6%97%B6%E9%97%B4%E5%A4%84%E7%90%86%E6%80%BB%E7%BB%93/</link>
       <pubDate>Thu, 10 Oct 2019 19:58:48 +0800</pubDate>
       
-      <guid>https://lossong.github.io/post/2019/10/10/java%E5%A4%84%E7%90%86%E6%97%B6%E9%97%B4%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
-      <description>首先要提到的就是Date类了 作为一个工具类，Date类是Java中比较常用类了（尽管有些方法过期了），总结一下它的用法 1 2 3 4 5 6 7 8 9 10 11</description>
+      <guid>https://lossong.github.io/post/2019/10/10/java%E6%97%B6%E9%97%B4%E5%A4%84%E7%90%86%E6%80%BB%E7%BB%93/</guid>
+      <description>Date 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 // 创建一个Date对象,采用当前系统时间作为日期 Date date = new Date(); //Thu May 23 01:00:32 CST 2019 System.out.println(date.toString()); //得到年份，获取到的年</description>
     </item>
     
     <item>
